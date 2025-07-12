@@ -211,8 +211,8 @@ class EcoAIAPITester:
 
 def main():
     """Main test execution"""
-    # Test against the configured backend URL
-    backend_url = "http://localhost:8001"
+    # Test against the public backend URL
+    backend_url = "https://demobackend.emergentagent.com"
     
     print(f"EcoAI Backend API Test Suite")
     print(f"Timestamp: {datetime.now().isoformat()}")
