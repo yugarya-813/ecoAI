@@ -221,10 +221,10 @@ function App() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { stat: "30%", label: "Faster websites" },
-              { stat: "15-30%", label: "Lower ad emissions" },
-              { stat: "100%", label: "Automated" },
-              { stat: "Real", label: "Environmental savings, not greenwashing" }
+              { stat: stats.load_time_improved || "30%", label: "Faster websites" },
+              { stat: stats.carbon_reduced || "15-30%", label: "Lower ad emissions" },
+              { stat: stats.automation_level || "100%", label: "Automated" },
+              { stat: stats.websites_optimized || "Real", label: "Environmental savings, not greenwashing" }
             ].map((item, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-4xl lg:text-5xl font-bold mb-2">{item.stat}</div>
