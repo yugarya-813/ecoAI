@@ -1,0 +1,98 @@
+/* Additional custom styles for animations and effects */
+
+.App {
+  min-height: 100vh;
+}
+
+/* Smooth scrolling enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom gradient text */
+.gradient-green {
+  background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+}
+
+/* Intersection Observer animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced button hover effects */
+.btn-primary:hover {
+  box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.3), 0 10px 10px -5px rgba(16, 185, 129, 0.04);
+}
+
+.btn-secondary:hover {
+  border-color: #059669;
+  color: #059669;
+}
+
+/* Card interactions */
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading states */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Enhanced focus states for accessibility */
+input:focus,
+button:focus {
+  outline: 2px solid #10B981;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness enhancements */
+@media (max-width: 640px) {
+  .section-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
+/* Performance optimization for animations */
+.animate-slide-up,
+.animate-slide-in-left,
+.animate-slide-in-right,
+.animate-fade-in {
+  will-change: transform, opacity;
+}
+
+/* Backdrop blur support */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  loading: lazy;
+}
